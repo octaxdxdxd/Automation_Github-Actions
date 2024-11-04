@@ -12,7 +12,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.JavascriptExecutor;
 
 public class FormaTest {
-
     public static WebDriver driver;
 
     @BeforeClass
