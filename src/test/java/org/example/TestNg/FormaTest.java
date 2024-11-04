@@ -1,5 +1,6 @@
 package org.example.TestNg;
 
+import demoqua.FormaPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,6 +11,7 @@ import org.testng.annotations.Test;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.JavascriptExecutor;
+
 
 public class FormaTest {
     public static WebDriver driver;
@@ -26,32 +28,40 @@ public class FormaTest {
     @Test
     public void FormaTest(){
         driver.get("https://demoqa.com/automation-practice-form");
-        WebElement firstName = driver.findElement(By.xpath("//*[@id='firstName']"));
-        firstName.sendKeys("Dolghieru");
+        FormaPage form = new FormaPage(driver);
+        form.setFirstNameElement(Basic.FIRST_NAME);
+        form.setLastNameElement(Basic.LAST_NAME);
+        form.setEmailElement(Basic.EMAIL);
+//
+//        WebElement userEmail = driver.findElement(By.xpath("//*[@id='userEmail']"));
+//        userEmail.sendKeys("maxdolghieru@gmial.com");
+//
+//        WebElement genderMaleLabel = driver.findElement(By.xpath("//label[@for='gender-radio-1']"));
+//        genderMaleLabel.click();
+//
+//        WebElement userNumber = driver.findElement(By.xpath("//*[@id='userNumber']"));
+//        userNumber.sendKeys("0687900636");
+//
+//        WebElement dateOfBirth = driver.findElement(By.xpath("//*[@id='dateOfBirth']"));
+//        JavascriptExecutor js = (JavascriptExecutor) driver;
+//        js.executeScript("value='10/25/2023';", dateOfBirth);
 
-        WebElement lastName = driver.findElement(By.xpath("//*[@id='lastName']"));
-        lastName.sendKeys("Maxim");
-
-        WebElement userEmail = driver.findElement(By.xpath("//*[@id='userEmail']"));
-        userEmail.sendKeys("maxdolghieru@gmial.com");
-
-        WebElement genderMaleLabel = driver.findElement(By.xpath("//label[@for='gender-radio-1']"));
-        genderMaleLabel.click();
-
-        WebElement userNumber = driver.findElement(By.xpath("//*[@id='userNumber']"));
-        userNumber.sendKeys("0687900636");
-
-        WebElement dateOfBirth = driver.findElement(By.xpath("//*[@id='dateOfBirth']"));
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].value='10/25/2023';", dateOfBirth);;
+//        WebElement subjectsInput = driver.findElement(By.xpath("//*[@id='subjectsInput']"));
+//        subjectsInput.sendKeys("Maths");
+//        subjectsInput.sendKeys(Keys.ENTER);
+//        subjectsInput.sendKeys("Chemistry");
+//        subjectsInput.sendKeys(Keys.ENTER);
+//
+//        WebElement hobbiesCheckbox3 = driver.findElement(By.xpath("//label[@id='hobbies-checkbox-3']"));
+//        hobbiesCheckbox3.click();
 
 
 
     }
 
-//    @AfterClass
-//    public void teardown() {
-//        driver.quit();
-//    }
+    @AfterClass
+    public void teardown() {
+        driver.quit();
+    }
 
 }
