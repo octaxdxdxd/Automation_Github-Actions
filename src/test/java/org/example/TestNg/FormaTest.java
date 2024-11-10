@@ -1,7 +1,6 @@
 package org.example.TestNg;
 
 import demoqua.FormaPage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -32,13 +31,16 @@ public class FormaTest {
         form.setFirstNameElement(Basic.FIRST_NAME);
         form.setLastNameElement(Basic.LAST_NAME);
         form.setEmailElement(Basic.EMAIL);
-//
-//        WebElement userEmail = driver.findElement(By.xpath("//*[@id='userEmail']"));
-//        userEmail.sendKeys("maxdolghieru@gmial.com");
-//
-//        WebElement genderMaleLabel = driver.findElement(By.xpath("//label[@for='gender-radio-1']"));
-//        genderMaleLabel.click();
-//
+        form.setGenderElement();
+        form.setMobileElement(Basic.Mobile);
+        form.setDateCalendarElement(Basic.DATE_OF_BIRTH);
+        form.setSubjectElement(Basic.SUBJECTS);
+        form.setTextAreaElement(Basic.TEXTAREA);
+        form.setStateElement(Basic.STATE);
+
+
+
+
 //        WebElement userNumber = driver.findElement(By.xpath("//*[@id='userNumber']"));
 //        userNumber.sendKeys("0687900636");
 //
@@ -59,9 +61,9 @@ public class FormaTest {
 
     }
 
-    @AfterClass
-    public void teardown() {
-        driver.quit();
-    }
+//    @AfterClass
+//    public void teardown() {
+//        driver.quit();
+//    }
 
 }
