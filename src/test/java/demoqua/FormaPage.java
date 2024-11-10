@@ -39,7 +39,7 @@ public class FormaPage {
     public FormaPage(WebDriver driver) {
         FormaPage.driver = driver;
         PageFactory.initElements(FormaPage.driver, this);
-        this.js = (JavascriptExecutor) driver;  // Initialize JavascriptExecutor after driver is set
+        this.js = (JavascriptExecutor) driver;
     }
 
     public String setFirstNameElement(String FirstNamePar) {
@@ -67,39 +67,30 @@ public class FormaPage {
     }
 
     public void setDateCalendarElement(String dateOfBirth) {
-        // Scroll to the calendar element
         js.executeScript("arguments[0].scrollIntoView(true);", dateOfBirthElement);
 
-        // Assume dateOfBirth is in the format "YYYY-MM-DD"
-        String[] dateParts = dateOfBirth.split("-");  // Split the date string into parts
-        String year = dateParts[0];   // Extract year
-        String month = dateParts[1];  // Extract month as a two-digit string
-        String day = dateParts[2];    // Extract day as a two-digit string
+        String[] dateParts = dateOfBirth.split("-");
+        String year = dateParts[0];
+        String month = dateParts[1];
+        String day = dateParts[2];
 
-        // Convert the month to the correct format if needed (e.g., from "10" to "October")
         String monthName = convertMonthNumberToName(month);
-
-        // Open the calendar picker
         dateOfBirthElement.click();
 
-        // Select year
         Select yearSelect = new Select(yearDropdown);
         yearSelect.selectByVisibleText(year);
 
-        // Select month
         Select monthSelect = new Select(monthDropdown);
         monthSelect.selectByVisibleText(monthName);
 
-        // Select day
         WebElement dayElement = driver.findElement(By.xpath("//div[text()='" + Integer.parseInt(day) + "']"));
         dayElement.click();
     }
 
     private String convertMonthNumberToName(String month) {
-        // Convert month number (e.g., "01", "02", ...) to month name (e.g., "January", "February", ...)
         String[] monthNames = {"January", "February", "March", "April", "May", "June",
                 "July", "August", "September", "October", "November", "December"};
-        int monthIndex = Integer.parseInt(month) - 1;  // Convert "01" to 0, "02" to 1, etc.
+        int monthIndex = Integer.parseInt(month) - 1;
         return monthNames[monthIndex];
     }
 

@@ -36,7 +36,6 @@ public class FormaTest {
         form.setDateCalendarElement(Basic.DATE_OF_BIRTH);
         form.setSubjectElement(Basic.SUBJECTS);
         form.setTextAreaElement(Basic.TEXTAREA);
-        form.setStateElement(Basic.STATE);
 
 
 
