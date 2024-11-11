@@ -1,7 +1,10 @@
 package org.example.TestNg;
+import org.apache.log4j.Logger;
 
 
 public class Basic {
+
+    public static Logger logger = Logger.getLogger(Basic.class);
 
     public static String FIRST_NAME = "Dolghieru";
     public static String LAST_NAME = "Maxim";
