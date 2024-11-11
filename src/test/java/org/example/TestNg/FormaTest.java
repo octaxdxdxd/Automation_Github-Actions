@@ -14,11 +14,8 @@ public class FormaTest extends Basic {
 
     @BeforeClass
     public void BeforeClass() {
-        System.setProperty("webdriver.chrome.driver", "C:\\chrome\\chromedriver-win64\\chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
-        driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
+       
+        driver= SeleniumDriver.getRemoteDriver();
     }
 
     @Test
