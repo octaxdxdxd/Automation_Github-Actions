@@ -58,6 +58,8 @@ public class FormaTest extends Basic {
         Thread.sleep(5000);
         form.setTextAreaElement(Basic.TEXTAREA);
 
+        Thread.sleep(5000);
+
 
 
 

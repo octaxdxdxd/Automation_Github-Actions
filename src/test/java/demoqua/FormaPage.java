@@ -93,7 +93,8 @@ public class FormaPage {
 
     public String setSubjectElement(String SubjectPar) {
         userSubjectsElement.sendKeys(SubjectPar);
-        userTextAreaElement.sendKeys(Keys.ENTER);
+        WebElement subjectEelment = driver.findElement(By.xpath("//*[text()='Maths']"));
+        subjectEelment.click();
         return SubjectPar;
     }
     public String setTextAreaElement(String TextAreaPar) {

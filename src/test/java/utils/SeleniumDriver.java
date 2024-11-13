@@ -17,7 +17,7 @@ import static org.example.TestNg.FormaTest.driver;
 public class SeleniumDriver {
 
     public static WebDriver setLocalDriver() {
-        System.setProperty("webdriver.chrome.driver", "D:\\WebDriver\\chromedriver-win64\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\chrome\\chromedriver-win64\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(options);
