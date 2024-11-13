@@ -17,7 +17,7 @@ import static org.example.TestNg.FormaTest.driver;
 public class SeleniumDriver {
 
     public static WebDriver setLocalDriver() {
-        System.setProperty("webdriver.chrome.driver", "C:\\chrome\\chromedriver-win64\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "D:\\WebDriver\\chromedriver-win64\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(options);
@@ -28,7 +28,7 @@ public class SeleniumDriver {
 
     public static RemoteWebDriver getRemoteDriver() {
         ChromeOptions options = new ChromeOptions();
-        options.setCapability("browserVersion", "131.0");
+        options.setCapability("browserVersion", "128.0");
         options.setCapability("selenoid:options", new HashMap<String, Object>() {{
             /* How to add test badge */
             put("name", "Test badge...");
