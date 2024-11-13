@@ -20,20 +20,42 @@ public class FormaTest extends Basic {
     }
 
     @Test
-    public void FormaTest(){
+    public void FormaTest() throws InterruptedException {
 
         logger.info("Start test");
 
         driver.get("https://demoqa.com/automation-practice-form");
         FormaPage form = new FormaPage(driver);
-        logger.info("Set User: Name - " + FIRST_NAME);
+        logger.info("Set User: Name - " + Basic.FIRST_NAME);
+        Thread.sleep(5000);
         form.setFirstNameElement(Basic.FIRST_NAME);
+
+        logger.info("Set User: Last Name - " + Basic.LAST_NAME);
+        Thread.sleep(5000);
         form.setLastNameElement(Basic.LAST_NAME);
+
+        logger.info("Set User: Email - " + Basic.EMAIL);
+        Thread.sleep(5000);
         form.setEmailElement(Basic.EMAIL);
+
+        logger.info("Set User: Gender");
+        Thread.sleep(5000);
         form.setGenderElement();
+
+        logger.info("Set User: Mobile - " + Basic.Mobile);
+        Thread.sleep(5000);
         form.setMobileElement(Basic.Mobile);
+
+        logger.info("Set User: Date of Birth - " + Basic.DATE_OF_BIRTH);
+        Thread.sleep(5000);
         form.setDateCalendarElement(Basic.DATE_OF_BIRTH);
+
+        logger.info("Set User: Subject - " + Basic.SUBJECTS);
+        Thread.sleep(5000);
         form.setSubjectElement(Basic.SUBJECTS);
+
+        logger.info("Set User: Address - " + Basic.TEXTAREA);
+        Thread.sleep(5000);
         form.setTextAreaElement(Basic.TEXTAREA);
 
 
@@ -41,20 +63,6 @@ public class FormaTest extends Basic {
 
 //        WebElement userNumber = driver.findElement(By.xpath("//*[@id='userNumber']"));
 //        userNumber.sendKeys("0687900636");
-//
-//        WebElement dateOfBirth = driver.findElement(By.xpath("//*[@id='dateOfBirth']"));
-//        JavascriptExecutor js = (JavascriptExecutor) driver;
-//        js.executeScript("value='10/25/2023';", dateOfBirth);
-
-//        WebElement subjectsInput = driver.findElement(By.xpath("//*[@id='subjectsInput']"));
-//        subjectsInput.sendKeys("Maths");
-//        subjectsInput.sendKeys(Keys.ENTER);
-//        subjectsInput.sendKeys("Chemistry");
-//        subjectsInput.sendKeys(Keys.ENTER);
-//
-//        WebElement hobbiesCheckbox3 = driver.findElement(By.xpath("//label[@id='hobbies-checkbox-3']"));
-//        hobbiesCheckbox3.click();
-
 
 
     }
