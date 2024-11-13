@@ -12,6 +12,7 @@ public class Basic {
     public static String EMAIL = "maxdolghieru@gmail.com";
     public static String Mobile = "068790063";
     public static String DATE_OF_BIRTH = "2005-04-18";
+    public static String HOBBY = "Sports";
     public static String SUBJECTS = "Maths";
     public static String TEXTAREA = "Dolghieru Maxim 2005 April 18";
     public static String STATE = "NCR";

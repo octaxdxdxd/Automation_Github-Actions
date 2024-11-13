@@ -1,11 +1,12 @@
 package demoqua;
 
+import org.example.TestNg.Basic;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class FormaPage {
+public class FormaPage{
     public static WebDriver driver;
     JavascriptExecutor js;
 
@@ -28,8 +29,8 @@ public class FormaPage {
     @FindBy(css=".react-datepicker__year-select")
     private WebElement yearDropdown;
 
-    @FindBy(id="subjectsInput")
-    private WebElement userSubjectsElement;
+    @FindBy(xpath = "//lable[@for='hobbies-checkbox-1']")
+    private WebElement userHobbiesElement;
     @FindBy(id="currentAddress")
     private WebElement userTextAreaElement;
 
@@ -91,9 +92,8 @@ public class FormaPage {
         return monthNames[monthIndex];
     }
 
-    public String setSubjectElement(String SubjectPar) {
-        userSubjectsElement.sendKeys(SubjectPar + Keys.ENTER);
-        return SubjectPar;
+    public void setHobbyElement() {
+        userHobbiesElement.click();
     }
 
     public String setTextAreaElement(String TextAreaPar) {
