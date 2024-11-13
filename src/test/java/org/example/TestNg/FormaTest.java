@@ -51,10 +51,8 @@ public class FormaTest extends Basic {
         form.setDateCalendarElement(Basic.DATE_OF_BIRTH);
 
         logger.info("Set User: Hobby - " + Basic.HOBBY);
-
-//        logger.info("Set User: Subject - " + Basic.SUBJECTS);
-//        Thread.sleep(5000);
-//        form.setSubjectElement(Basic.SUBJECTS);
+        Thread.sleep(5000);
+        form.setHobbyElement();
 
         logger.info("Set User: Address - " + Basic.TEXTAREA);
         Thread.sleep(5000);
