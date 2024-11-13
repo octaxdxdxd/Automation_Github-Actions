@@ -92,9 +92,7 @@ public class FormaPage {
     }
 
     public String setSubjectElement(String SubjectPar) {
-        userSubjectsElement.sendKeys(SubjectPar);
-        WebElement subjectElement = driver.findElement(By.xpath("//div[@class='subjects-auto-complete__menu']//div[contains(text(),'" + SubjectPar + "')]"));
-        subjectElement.click();
+        userSubjectsElement.sendKeys(SubjectPar + Keys.ENTER);
         return SubjectPar;
     }
 

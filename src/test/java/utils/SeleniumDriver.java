@@ -28,7 +28,7 @@ public class SeleniumDriver {
 
     public static RemoteWebDriver getRemoteDriver() {
         ChromeOptions options = new ChromeOptions();
-        options.setCapability("browserVersion", "128.0");
+        options.setCapability("browserVersion", "131.0");
         options.setCapability("selenoid:options", new HashMap<String, Object>() {{
             /* How to add test badge */
             put("name", "Test badge...");
