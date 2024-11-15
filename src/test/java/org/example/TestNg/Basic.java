@@ -6,15 +6,15 @@ public class Basic {
 
     public static Logger logger = Logger.getLogger(Basic.class);
 
-    public static String FIRST_NAME = "Dolghieru";
-    public static String LAST_NAME = "Maxim";
+    public static String FIRST_NAME = "Popov";
+    public static String LAST_NAME = "Octavan";
     public static String GENDER = "Male";
-    public static String EMAIL = "maxdolghieru@gmail.com";
-    public static String Mobile = "068790063";
-    public static String DATE_OF_BIRTH = "2005-04-18";
+    public static String EMAIL = "octavianpopov@gmail.com";
+    public static String Mobile = "067350365";
+    public static String DATE_OF_BIRTH = "2000-06-10";
     public static String HOBBY = "Sports";
-    public static String SUBJECTS = "Maths";
-    public static String TEXTAREA = "Dolghieru Maxim 2005 April 18";
+    public static String SUBJECTS = "Science";
+    public static String TEXTAREA = "Popov Octavian 2000 June 10";
     public static String STATE = "NCR";
 
 
