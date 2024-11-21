@@ -6,33 +6,43 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class FormaPage{
+
+public class FormaPage {
     public static WebDriver driver;
     JavascriptExecutor js;
 
-    @FindBy(id="firstName")
+    @FindBy(id = "firstName")
     private WebElement firstNameElement;
-    @FindBy(id="lastName")
+    @FindBy(id = "lastName")
     private WebElement lastNameElement;
-    @FindBy(id="userEmail")
+    @FindBy(id = "userEmail")
     private WebElement userEmailElement;
-    @FindBy(xpath="//label[@for='gender-radio-1']")
+    @FindBy(xpath = "//label[@for='gender-radio-1']")
     private WebElement userGenderElement;
-    @FindBy(id="userNumber")
+    @FindBy(id = "userNumber")
     private WebElement userMobileElement;
-    @FindBy(id="dateOfBirthInput")
+    @FindBy(id = "dateOfBirthInput")
     private WebElement dateOfBirthElement;
 
-    @FindBy(css=".react-datepicker__month-select")
+    @FindBy(css = ".react-datepicker__month-select")
     private WebElement monthDropdown;
 
-    @FindBy(css=".react-datepicker__year-select")
+    @FindBy(css = ".react-datepicker__year-select")
     private WebElement yearDropdown;
 
     @FindBy(xpath = "//label[@for='hobbies-checkbox-1']")
     private WebElement userHobbiesElement;
-    @FindBy(id="currentAddress")
+    @FindBy(id = "currentAddress")
     private WebElement userTextAreaElement;
+
+    @FindBy(id = "subjectsInput")
+    private WebElement subjectsInputElement;
+
+    @FindBy(id = "state")
+    private WebElement stateDropdown;
+
+    @FindBy(id = "city")
+    private WebElement cityDropdown;
 
     public FormaPage(WebDriver driver) {
         FormaPage.driver = driver;
@@ -40,28 +50,28 @@ public class FormaPage{
         this.js = (JavascriptExecutor) driver;
     }
 
-    public String setFirstNameElement(String FirstNamePar) {
-        firstNameElement.sendKeys(FirstNamePar);
-        return FirstNamePar;
+    public String setFirstNameElement(String firstNamePar) {
+        firstNameElement.sendKeys(firstNamePar);
+        return firstNamePar;
     }
 
-    public String setLastNameElement(String LastNamePar) {
-        lastNameElement.sendKeys(LastNamePar);
-        return LastNamePar;
+    public String setLastNameElement(String lastNamePar) {
+        lastNameElement.sendKeys(lastNamePar);
+        return lastNamePar;
     }
 
-    public String setEmailElement(String EmailPar) {
-        userEmailElement.sendKeys(EmailPar);
-        return EmailPar;
+    public String setEmailElement(String emailPar) {
+        userEmailElement.sendKeys(emailPar);
+        return emailPar;
     }
 
     public void setGenderElement() {
         userGenderElement.click();
     }
 
-    public String setMobileElement(String MobilePar) {
-        userMobileElement.sendKeys(MobilePar);
-        return MobilePar;
+    public String setMobileElement(String mobilePar) {
+        userMobileElement.sendKeys(mobilePar);
+        return mobilePar;
     }
 
     public void setDateCalendarElement(String dateOfBirth) {
@@ -96,8 +106,25 @@ public class FormaPage{
         userHobbiesElement.click();
     }
 
-    public String setTextAreaElement(String TextAreaPar) {
-        userTextAreaElement.sendKeys(TextAreaPar);
-        return TextAreaPar;
+    public String setTextAreaElement(String textAreaPar) {
+        userTextAreaElement.sendKeys(textAreaPar);
+        return textAreaPar;
+    }
+
+    public void setSubjects(String subject) {
+        subjectsInputElement.sendKeys(subject);
+        subjectsInputElement.sendKeys(Keys.ENTER);
+    }
+
+    public void setState(String state) {
+        stateDropdown.click();
+        WebElement stateOption = driver.findElement(By.xpath("//div[text()='" + state + "']"));
+        stateOption.click();
+    }
+
+    public void setCity(String city) {
+        cityDropdown.click();
+        WebElement cityOption = driver.findElement(By.xpath("//div[text()='" + city + "']"));
+        cityOption.click();
     }
 }

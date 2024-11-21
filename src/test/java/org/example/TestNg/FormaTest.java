@@ -50,6 +50,9 @@ public class FormaTest extends Basic {
         Thread.sleep(1000);
         form.setDateCalendarElement(Basic.DATE_OF_BIRTH);
 
+        logger.info("Set User: Subject - Mathematics");
+        form.setSubjects("Mathematics");
+
         logger.info("Set User: Hobbies - " + Basic.HOBBY);
         Thread.sleep(1000);
         form.setHobbyElement();
@@ -57,6 +60,12 @@ public class FormaTest extends Basic {
         logger.info("Set User: Address - " + Basic.TEXTAREA);
         Thread.sleep(1000);
         form.setTextAreaElement(Basic.TEXTAREA);
+
+        logger.info("Set User: State - NCR");
+        form.setState("NCR");
+
+        logger.info("Set User: City - Delhi");
+        form.setCity("Delhi");
 
         Thread.sleep(10000);
 
