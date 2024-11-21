@@ -26,50 +26,44 @@ public class FormaTest extends Basic {
 
         driver.get("https://demoqa.com/automation-practice-form");
         FormaPage form = new FormaPage(driver);
+
         logger.info("Set User: Name - " + Basic.FIRST_NAME);
-        Thread.sleep(1000);
         form.setFirstNameElement(Basic.FIRST_NAME);
 
         logger.info("Set User: Last Name - " + Basic.LAST_NAME);
-        Thread.sleep(1000);
         form.setLastNameElement(Basic.LAST_NAME);
 
         logger.info("Set User: Email - " + Basic.EMAIL);
-        Thread.sleep(1000);
         form.setEmailElement(Basic.EMAIL);
 
         logger.info("Set User: Gender");
-        Thread.sleep(1000);
         form.setGenderElement();
 
-        logger.info("Set User: Mobile - " + Basic.Mobile);
-        Thread.sleep(1000);
-        form.setMobileElement(Basic.Mobile);
+        logger.info("Set User: Mobile - " + Basic.MOBILE);
+        form.setMobileElement(Basic.MOBILE);
 
         logger.info("Set User: Date of Birth - " + Basic.DATE_OF_BIRTH);
-        Thread.sleep(1000);
         form.setDateCalendarElement(Basic.DATE_OF_BIRTH);
 
-        logger.info("Set User: Subject - Mathematics");
-        form.setSubjects("Mathematics");
+        logger.info("Set User: Subject - " + Basic.SUBJECT);
+        form.setSubjects(Basic.SUBJECT);
 
         logger.info("Set User: Hobbies - " + Basic.HOBBY);
-        Thread.sleep(1000);
         form.setHobbyElement();
 
         logger.info("Set User: Address - " + Basic.TEXTAREA);
-        Thread.sleep(1000);
         form.setTextAreaElement(Basic.TEXTAREA);
 
-        logger.info("Set User: State - NCR");
-        form.setState("NCR");
+        logger.info("Set User: State - " + Basic.STATE);
+        form.setState(Basic.STATE);
 
-        logger.info("Set User: City - Delhi");
-        form.setCity("Delhi");
+        logger.info("Set User: City - " + Basic.CITY);
+        form.setCity(Basic.CITY);
 
-        Thread.sleep(10000);
+        Thread.sleep(1000); // For demo purposes
 
-    }
+
+}
 
     @AfterClass
     public void teardown() {
