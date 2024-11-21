@@ -12,11 +12,6 @@ public class Basic {
     public static String EMAIL = "octavianpopov@gmail.com";
     public static String Mobile = "067350365";
     public static String DATE_OF_BIRTH = "2000-06-10";
-    public static String SUBJECTS = "Science";
     public static String HOBBY = "Sports";
     public static String TEXTAREA = "Popov Octavian 2000 June 10";
-    public static String STATE = "NCR";
-    public static String CUTY = "Delhi";
-
-
 }

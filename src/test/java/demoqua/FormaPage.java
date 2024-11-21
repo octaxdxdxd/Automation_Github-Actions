@@ -29,7 +29,7 @@ public class FormaPage{
     @FindBy(css=".react-datepicker__year-select")
     private WebElement yearDropdown;
 
-    @FindBy(xpath = "//lable[@for='hobbies-checkbox-1']")
+    @FindBy(xpath = "//label[@for='hobbies-checkbox-1']")
     private WebElement userHobbiesElement;
     @FindBy(id="currentAddress")
     private WebElement userTextAreaElement;
