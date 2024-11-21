@@ -52,17 +52,10 @@ public class FormaTest extends Basic {
 
 
         logger.info("Set User: Address - " + Basic.TEXTAREA);
-        Thread.sleep(5000);
+        Thread.sleep(1000);
         form.setTextAreaElement(Basic.TEXTAREA);
 
-        Thread.sleep(5000);
-
-
-
-
-//        WebElement userNumber = driver.findElement(By.xpath("//*[@id='userNumber']"));
-//        userNumber.sendKeys("0687900636");
-
+        Thread.sleep(10000);
 
     }
 
